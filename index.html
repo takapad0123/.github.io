@@ -42,10 +42,28 @@
               <img src="img/mainimg.jpg" alt="メイン画像">  
         </div>
     <main>
-        <div class="catch">
-        <h2><span class="under">みんな集合論をやるのだ!</span></h2>
-        <p>集合論の知識やネタを提供するのだ.</p>
-        </div>
+      <div class="catch">
+    <h2><span id="dynamicText" class="under">みんな集合論をやるのだ!</span></h2>
+    <p>集合論の知識やネタを提供するのだ.</p>
+</div>
+
+<script>
+    window.onload = function() {
+        var text = document.getElementById('dynamicText');
+        if (window.innerWidth <= 600) {
+            text.innerHTML = 'みんな集合論を<br>やるのだ!';
+        }
+    }
+    window.onresize = function() {
+        var text = document.getElementById('dynamicText');
+        if (window.innerWidth <= 600) {
+            text.innerHTML = 'みんな集合論を<br>やるのだ!';
+        } else {
+            text.innerHTML = 'みんな集合論をやるのだ!';
+        }
+    }
+</script>
+
         
 <section id="1" class="gray-back">
         <dvi class="catch">
@@ -101,13 +119,18 @@
 <section id="2">
         <h2 class="center"><span class="under">動画紹介</span></h2>
 <div class="container center">
-<div class="row">
-    <div class="col span-6">
-<!-- 		<img src="img/staff.jpg" alt="スタッフ">
-		<h3>スタッフ</h3>
-		<p>ここに説明文が入ります</p> -->
-        <iframe width="580" height="326" src="https://www.youtube.com/embed/71VmQto9Qs4" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="row">
+        <div class="col span-4" style="width: 100%; height: 33%;">
+        <a href="https://www.youtube.com/watch?v=71VmQto9Qs4">
+            <img src="img/sumnail/countrymanline.jpg" alt="CountrymanLine">
+        </a>
+        </div>
+<!--         <div class="col span-4" style="width: 100%; height: 33%;">
+            <iframe style="width: 100%; height: 100%;" src="https://www.youtube.com/embed/71VmQto9Qs4" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div> -->
     </div>
+</div>
+
 <!--     <div class="col span-6">
         <iframe width="580" height="326" src="https://www.youtube.com/embed/71VmQto9Qs4" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div> -->
@@ -155,20 +178,19 @@
 <div class="row">
     <div class="col span-6">
         <h4>Twitter</h4>
-        <a href="https://twitter.com/zunda_puremath">
-        <p><font color="#0000ff">リンク</p>
+        <p style="color: #0000ff;"><a href="https://twitter.com/zunda_puremath">Twitterのリンク</a></p>
     </div>
     <div class="col span-6">
         <h4>YouTube</h4>
-        <a href="https://t.co/WNaSIJJXho">
-        <p><font color="#0000ff">リンク</p>
+        <p style="color: #0000ff;"><a href="https://t.co/WNaSIJJXho">YouTubeのリンク</a></p>
     </div>
-        </div>
 </div>
-    </footer>
+
+<!--     </footer>
     <div class="copyright">
     <a href="https://popo-design.net" target="_blank">Copyright © popodesign.</a> 
         </div>
-    <p id="pagetop"><a href="#">TOP</a></p>
+    <p id="pagetop"><a href="#">TOP</a></p> -->
+
 </body>
 </html>

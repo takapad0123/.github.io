@@ -146,8 +146,17 @@ section {
     padding-bottom: 1rem;
 }
 .under {
+    display: inline-block;
     border-bottom: 0.4rem solid var(--base-color);
-    padding:0 1rem 1rem 1rem;
+    padding: 0 1rem 0.6rem 1rem;
+    width: auto; /* 幅を自動調整 */
+    text-align: center; /* テキストを中央揃え */
+}
+@media (max-width: 600px) {
+    .under::after {
+        white-space: pre; /* 改行を有効にする */
+        display: block; /* ブロック要素として表示 */
+    }
 }
 .center {
 	text-align: center;
