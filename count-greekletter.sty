@@ -1,0 +1,126 @@
+
+%count greek letter
+\newwrite\@greeklettercount%
+\immediate\openout\@greeklettercount=\jobname-greeklettercount.txt%
+%
+\let\@alpha\alpha
+\newcount\cnt@alpha
+\def\alpha{\@alpha\global\advance\cnt@alpha\@ne}
+% beta
+\let\@beta\beta
+\newcount\cnt@beta
+\def\beta{\@beta\global\advance\cnt@beta\@ne}
+% gamma
+\let\@gamma\gamma
+\newcount\cnt@gamma
+\def\gamma{\@gamma\global\advance\cnt@gamma\@ne}
+% delta
+\let\@delta\delta
+\newcount\cnt@delta
+\def\delta{\@delta\global\advance\cnt@delta\@ne}
+% epsilon
+\let\@epsilon\epsilon
+\newcount\cnt@epsilon
+\def\epsilon{\@epsilon\global\advance\cnt@epsilon\@ne}
+% zeta
+\let\@zeta\zeta
+\newcount\cnt@zeta
+\def\zeta{\@zeta\global\advance\cnt@zeta\@ne}
+% eta
+\let\@eta\eta
+\newcount\cnt@eta
+\def\eta{\@eta\global\advance\cnt@eta\@ne}
+% theta
+\let\@theta\theta
+\newcount\cnt@theta
+\def\theta{\@theta\global\advance\cnt@theta\@ne}
+% eota
+\let\@eota\iota
+\newcount\cnt@iota
+\def\eota{\@iota\global\advance\cnt@iota\@ne}
+% kappa
+\let\@kappa\kappa
+\newcount\cnt@kappa
+\def\kappa{\@kappa\global\advance\cnt@kappa\@ne}
+% lambda
+\let\@lambda\lambda
+\newcount\cnt@lambda
+\def\lambda{\@lambda\global\advance\cnt@lambda\@ne}
+% mu
+\let\@mu\mu
+\newcount\cnt@mu
+\def\mu{\@mu\global\advance\cnt@mu\@ne}
+% nu
+\let\@nu\nu
+\newcount\cnt@nu
+\def\nu{\@nu\global\advance\cnt@nu\@ne}
+% xi
+\let\@xi\xi
+\newcount\cnt@xi
+\def\xi{\@xi\global\advance\cnt@xi\@ne}
+% omicron
+\let\@omicron\omicron
+\newcount\cnt@omicron
+\def\omicron{\@omicron\global\advance\cnt@omicron\@ne}
+% pi
+\let\@pi\pi
+\newcount\cnt@pi
+\def\pi{\@pi\global\advance\cnt@pi\@ne}
+% rho
+\let\@rho\rho
+\newcount\cnt@rho
+\def\rho{\@rho\global\advance\cnt@rho\@ne}
+% sigma
+\let\@sigma\sigma
+\newcount\cnt@sigma
+\def\sigma{\@sigma\global\advance\cnt@sigma\@ne}
+% tau
+\let\@tau\tau
+\newcount\cnt@tau
+\def\tau{\@tau\global\advance\cnt@tau\@ne}
+% upsilon
+\let\@upsilon\upsilon
+\newcount\cnt@upsilon
+\def\upsilon{\@upsilon\global\advance\cnt@upsilon\@ne}
+% phi
+\let\@phi\phi
+\newcount\cnt@phi
+\def\phi{\@phi\global\advance\cnt@phi\@ne}
+% chi
+\let\@chi\chi
+\newcount\cnt@chi
+\def\chi{\@chi\global\advance\cnt@chi\@ne}
+% omega
+\let\@omega\omega
+\newcount\cnt@omega
+\def\omega{\@omega\global\advance\cnt@omega\@ne}
+\let\@psi\psi
+\newcount\cnt@psi
+\def\psi{\@psi\global\advance\cnt@psi\@ne}
+%
+\def\countgreekletter{
+	\immediate\write\@greeklettercount{alpha:\the\cnt@alpha}
+	\immediate\write\@greeklettercount{beta:\the\cnt@beta}
+	\immediate\write\@greeklettercount{gamma:\the\cnt@gamma}
+	\immediate\write\@greeklettercount{delta:\the\cnt@delta}
+	\immediate\write\@greeklettercount{epsilon:\the\cnt@epsilon}
+	\immediate\write\@greeklettercount{zeta:\the\cnt@zeta}
+	\immediate\write\@greeklettercount{eta:\the\cnt@eta}
+	\immediate\write\@greeklettercount{theta:\the\cnt@theta}
+	\immediate\write\@greeklettercount{iota:\the\cnt@iota}
+	\immediate\write\@greeklettercount{kappa:\the\cnt@kappa}
+	\immediate\write\@greeklettercount{lambda:\the\cnt@lambda}
+	\immediate\write\@greeklettercount{mu:\the\cnt@mu}
+	\immediate\write\@greeklettercount{nu:\the\cnt@nu}
+	\immediate\write\@greeklettercount{xi:\the\cnt@xi}
+	\immediate\write\@greeklettercount{omicron:\the\cnt@omicron}
+	\immediate\write\@greeklettercount{pi:\the\cnt@pi}
+	\immediate\write\@greeklettercount{rho:\the\cnt@rho}
+	\immediate\write\@greeklettercount{sigma:\the\cnt@sigma}
+	\immediate\write\@greeklettercount{tau:\the\cnt@tau}
+	\immediate\write\@greeklettercount{upsilon:\the\cnt@upsilon}
+	\immediate\write\@greeklettercount{phi:\the\cnt@phi}
+	\immediate\write\@greeklettercount{chi:\the\cnt@chi}
+	\immediate\write\@greeklettercount{psi:\the\cnt@psi}
+	\immediate\write\@greeklettercount{omega:\the\cnt@omega}
+}
